@@ -1,5 +1,5 @@
 {
-    "name": "pierrerigal/stapler",
+    "name": "codesleeve/stapler",
     "description": "Easy file attachment management using Eloquent in Laravel 4",
     "keywords": ["laravel", "file", "upload", "S3", "AWS", "paperclip", "lpm"],
     "license": "MIT",
