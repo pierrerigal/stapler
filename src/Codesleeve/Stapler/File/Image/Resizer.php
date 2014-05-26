@@ -34,13 +34,17 @@ class Resizer
 		list($width, $height, $option) = $this->parseStyleDimensions($style);
 		$method = "resize" . ucfirst($option);
 
+		$saveoptions = array(
+		    'quality' => '100',
+		);
+
 		if ($method == 'resizeCustom') {
 			$this->resizeCustom($file, $style->value)
-				->save($filePath);
+				->save($filePath,$saveoptions);
 		}
     	else {
       		$this->$method($file, $width, $height)
-		       ->save($filePath);
+		       ->save($filePath,$saveoptions);
 		}
 
 		return $filePath;
